@@ -1,0 +1,6 @@
+/* 푸터 리스트 호버 */
+.footer-list:hover {
+  color: white;
+  transition: all 0.3s;
+  font-weight: bold;
+}
