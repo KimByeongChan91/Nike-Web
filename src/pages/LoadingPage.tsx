@@ -19,11 +19,12 @@ const LoadingPage: React.FC = () => {
 
   // 애니메이션 적용
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "auto" }); // 스크롤을 맨 위로 올림 
-    boxRefs.forEach((ref, i) => { 
+    window.scrollTo({ top: 0, behavior: "auto" }); // 스크롤을 맨 위로 올림
+    boxRefs.forEach((ref, i) => {
       loadingGSAP(ref, i); // GSAP 연결
     });
 
+    window.scrollTo(0, 0);
   }, []);
 
   return (

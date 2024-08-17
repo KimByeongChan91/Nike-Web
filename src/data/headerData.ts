@@ -12,12 +12,12 @@ export const headerDetailsData : HeaderDetailsDataType[] = [
   {
     id: "매장찾기",
     title: "매장찾기",
-    url: "/",
+    url: "/findStore",
   },
   {
     id: "고객센터",
     title: "고객센터",
-    url: "/",
+    url: "/about",
   },
   {
     id: "가입하기",

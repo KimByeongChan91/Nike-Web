@@ -6,6 +6,8 @@ import Product from "./pages/product/ProductPage";
 import Member from "./pages/member/MemberPage";
 import ErrorPage from "./pages/ErrorPage";
 import Layout from "./Layout";
+import FindStorePage from "./pages/findStore/FindStroePage";
+import Profile from "./components/member/profile/Profile";
 
 const App: React.FC = () => {
   return (
@@ -18,6 +20,8 @@ const App: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/product" element={<Product />} />
           <Route path="/member" element={<Member />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/findStore" element={<FindStorePage />} />
         </Route>
         {/* 에러 페이지 컴포넌트 */}
         <Route path="*" element={<ErrorPage />} />

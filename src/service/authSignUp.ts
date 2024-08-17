@@ -26,6 +26,6 @@ export function signUp(email: string, password: string, name: string) {
       // 실패 시 응답코드 , 메시지 출력
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.error("에러 발생 : ", errorCode, errorMessage);
+      console.error("회원가입 에러 발생 : ", errorCode, errorMessage);
     });
 }

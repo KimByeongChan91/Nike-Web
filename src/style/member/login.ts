@@ -112,6 +112,9 @@ export const inputStyle: CSSProperties = {
   height: root.px50,
   outline: root.none,
   fontSize: root.font20,
+  border: "1px solid #aaa",
+  borderRadius: "5px",
+  paddingInline: "10px",
 };
 
 // 로그인 버튼

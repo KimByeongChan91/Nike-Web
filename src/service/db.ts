@@ -3,6 +3,7 @@ import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
+// 파이어 베이스 연결 객체 타입
 type ConfigType = {
   apiKey: string;
   authDomain: string;

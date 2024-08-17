@@ -8,4 +8,5 @@ export const profileContainerStyle : CSSProperties = {
     backgroundColor : root.white,
     paddingTop : '70px',
     boxSizing : root.box_border,
+    marginBottom : root.p5
 }

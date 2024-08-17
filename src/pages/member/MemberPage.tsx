@@ -4,6 +4,7 @@ import LoadingPage from "../LoadingPage";
 import Login from "../../components/member/login/Login";
 import SignUp from "../../components/member/signup/SignUp";
 import Profile from "../../components/member/profile/Profile";
+import { login } from "../../service/authLogin";
 
 const MenberPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true); // 로딩 값
@@ -23,6 +24,13 @@ const MenberPage: React.FC = () => {
   useEffect(() => {
     if (!isLoading) {
       fadeInGSAP(pageRef);
+
+      const localUser = localStorage.getItem("user");
+
+      if (localUser) {
+        const user = JSON.parse(localUser);
+        login(user.email, user.pw);
+      }
     }
   }, [isLoading]);
 
@@ -36,7 +44,12 @@ const MenberPage: React.FC = () => {
           {/* 회원가입 모달  */}
           {isSignUp ? <SignUp setIsSignUp={setIsSignUp} /> : null}
           {/* 로그인 중이라면 프로필를 / 로그인 중이 아니라면 로그인을 */}
-          {isLogin ? <Profile /> : <Login setIsSignUp={setIsSignUp} />};
+          {isLogin ? (
+            <Profile />
+          ) : (
+            <Login setIsSignUp={setIsSignUp} setIsLogin={setIsLogin} />
+          )}
+          ;
         </div>
       )}
     </>
