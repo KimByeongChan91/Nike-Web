@@ -25,7 +25,7 @@ const FindStorePage = () => {
   }, [isLoading]); // 로딩 페이지 상태 값 변경 시마다 실행
 
   return (
-    <>
+    <div style={{ scrollbarColor: "#000000 #ffffff", scrollbarWidth: "thin" }}>
       {isLoading ? (
         <LoadingPage />
       ) : (
@@ -35,7 +35,7 @@ const FindStorePage = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

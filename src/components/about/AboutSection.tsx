@@ -15,13 +15,11 @@ function AboutSection({ title, content, imageUrl }: any) {
         <img
           src={imageUrl}
           alt={title}
-          className="section-image"
+          className="section-image object-cover"
           style={aboutSectionImgStyle}
         />
       </div>
-      <p style={aboutContentStyle}>
-        {content}
-      </p>
+      <p style={aboutContentStyle}>{content}</p>
     </div>
   );
 }

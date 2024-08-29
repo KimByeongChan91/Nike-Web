@@ -35,6 +35,7 @@ type Root = {
   center: "center";
   end: "end";
   gap10: "10px";
+  gap20: "20px";
   gap30: "30px";
   gap50: "50px";
 
@@ -59,6 +60,7 @@ type Root = {
   box_border: "border-box";
 
   cover: "cover";
+  contain: "contain";
 
   z999: "999";
   z5: "5";
@@ -71,8 +73,11 @@ type Root = {
 
   none: "none";
 
+  pointer: "pointer";
+
   px50: "50px";
   px100: "100px";
+  px150: "150px";
 };
 
 // 루트 스타일 값
@@ -118,6 +123,7 @@ export const root: Root = {
   center: "center", // 가운데 정렬
   end: "end", // 끝에 정렬
   gap10: "10px", // 얇은 간격
+  gap20: "20px",
   gap30: "30px", // 중간 간격
   gap50: "50px", // 두꺼운 간격
 
@@ -147,6 +153,7 @@ export const root: Root = {
 
   // object
   cover: "cover", // 컨테이너 크기에 비율을 맞춤
+  contain: "contain", // 원래 비율 유지하며 크기 조정
 
   // z-index
   z999: "999", // 제일 앞에 위치
@@ -162,6 +169,9 @@ export const root: Root = {
 
   none: "none", //
 
+  pointer: "pointer",
+
   px50: "50px", // 50px
   px100: "100px", // 100px
+  px150: "150px", // 150px
 };

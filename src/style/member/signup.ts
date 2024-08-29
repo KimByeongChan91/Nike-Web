@@ -71,6 +71,9 @@ export const inputTitleStyle: CSSProperties = {
 export const inputStyle: CSSProperties = {
   width: root.fullSize,
   height: root.gap30,
+  border: "1px solid black",
+  borderRadius: "5px",
+  paddingInline: "5px",
 };
 
 // 가입하기 버튼

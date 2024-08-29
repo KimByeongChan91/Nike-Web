@@ -18,6 +18,7 @@ import {
   promotionTextStyle,
   promotionTitleStyle,
 } from "../../style/home/promotionStyle"; // 스타일 시트
+import { Link } from "react-router-dom";
 
 // 스타일 시트 배열
 const styles = [
@@ -37,14 +38,16 @@ const Promotion: React.FC = () => {
     (data: PromotionDataType, i: number): JSX.Element => {
       return (
         <div style={{ ...promotionImgStyle, ...styles[i] }} key={data.id}>
-          <img style={promotionImgStyle} src={data.image} alt={data.title} />
-          <div style={promotionTextStyle}>
-            <span>{data.theme}</span>
-            <h1 style={promotionTitleStyle}>{data.title}</h1>
-            <div style={promotionIconStyle}>
-              <IoIosArrowForward />
+          <Link to="/about">
+            <img style={promotionImgStyle} src={data.image} alt={data.title} />
+            <div style={promotionTextStyle}>
+              <span>{data.theme}</span>
+              <h1 style={promotionTitleStyle}>{data.title}</h1>
+              <div style={promotionIconStyle}>
+                <IoIosArrowForward />
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       );
     }

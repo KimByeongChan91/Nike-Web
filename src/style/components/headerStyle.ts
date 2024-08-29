@@ -14,7 +14,7 @@ export const headerStyle: CSSProperties = {
   justifyContent: root.between,
   alignItems: root.center,
   boxSizing: root.box_border,
-  zIndex: root.z5,
+  zIndex: 999,
 };
 
 // 헤더 왼쪽 컨텐츠
@@ -57,7 +57,7 @@ export const headerDetailsListStyle: CSSProperties = {
   fontSize: root.font12,
 };
 
-export const headerFooterIconStyle : CSSProperties = {
-  fontSize : '30px',
-  cursor : 'pointer',
-}
+export const headerFooterIconStyle: CSSProperties = {
+  fontSize: "30px",
+  cursor: "pointer",
+};

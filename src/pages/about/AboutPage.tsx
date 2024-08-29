@@ -75,7 +75,13 @@ function About() {
           ))}
           {/* 매장찾기 링크*/}
 
-          <div className="flex justify-center items-center p-20">
+          <div
+            className="flex justify-center items-center p-20"
+            style={{
+              scrollbarColor: "#000000 #ffffff",
+              scrollbarWidth: "thin",
+            }}
+          >
             <Link to="/findStore">
               <span className="p-2 font-bold text-4xl border-b-2 border-black border-solid">
                 나이키 매장 찾으러 가기

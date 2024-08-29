@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { login } from "../../../service/authLogin";
 import {
   inputBoxStyle,
@@ -73,7 +73,6 @@ const Login: React.FC<PropType> = ({ setIsSignUp, setIsLogin }: PropType) => {
     if (loginResult) {
       console.log("로그인 성공");
       setIsLogin(true);
-      navigation("/profile");
       localStorage.setItem("user", JSON.stringify(user));
     } else {
       console.log("로그인 실패");
@@ -82,6 +81,29 @@ const Login: React.FC<PropType> = ({ setIsSignUp, setIsLogin }: PropType) => {
       window.alert("로그인 정보가 일치하지 않습니다!");
     }
   };
+
+  // 이전 로그인 상태였다면 로그인 하기
+  useEffect(() => {
+    const loginUser = localStorage.getItem("user");
+
+    const isLogin = async () => {
+      if (loginUser) {
+        const userData = JSON.parse(loginUser);
+        const loginResult = await login(userData.email, userData.pw);
+        if (loginResult) {
+          console.log("로그인 성공");
+          setIsLogin(true);
+        } else {
+          console.log("로그인 실패");
+          setIsLogin(false);
+          navigation("/member");
+          window.alert("로그인 정보가 일치하지 않습니다!");
+        }
+      }
+    };
+
+    isLogin();
+  }, []);
 
   return (
     <section style={loginContainerStyle}>
